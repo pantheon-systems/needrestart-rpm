@@ -2,7 +2,7 @@
 set -e
 
 # which fedora distros to build this rpm for
-FEDORA_VERS="19 20"
+FEDORA_VERS="19 20 21"
 
 CURRENT_DIR="$(dirname "$(readlink -f $0)")"
 
