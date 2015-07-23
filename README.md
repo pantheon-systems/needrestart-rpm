@@ -3,13 +3,14 @@ rpm package for needrestart utility
 
 RPM `.spec` and scripts for creating rpm packages of the `needrestart` util.
 
-Building RPM
-------------
+Usage
+-----
 
-Run the `docker-build.sh` script which will take the following actions:
+This repo is designed for Circle-CI to do both the RPM builds and pushing
+RPM artifacts to package_cloud. The push to package_cloud only happens from the `master` branch.
 
-1. pull down a docker image pre-populated with dev tools and rpm
-  build tools.
-2. execute `rpm-build.sh` inside the container
-  to identify this is a Pantheon-forked package.
-3. on success, `.rpm`'s will be in the `RPMS` dir and `.src.rpm`'s will be in `SRPMS`
+You can run the RPM builds manually with `make rpm`. Docker is required.
+
+You can push the RPMs to package_cloud with `make package_deploy`.
+
+Ensure a `PACKAGECLOUD_TOKEN` env var is set in your local env or on the circle-ci project.

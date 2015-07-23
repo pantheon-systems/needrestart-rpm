@@ -1,6 +1,7 @@
-# configure these
+%define datecode  %(date +%Y%m%d%H%M)
+
 %define nr_ver  2.0
-%define release_number 2
+%define release_number %{datecode}
 
 Name:		needrestart
 Version:	%{nr_ver}
