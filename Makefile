@@ -3,7 +3,7 @@ all: package_deploy
 clean:
 	rm -rf RPMS SRPMS
 
-rpm: clean
+rpm:
 	bash docker-build.sh
 
 circle_deps:
