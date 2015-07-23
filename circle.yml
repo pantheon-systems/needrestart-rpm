@@ -1,0 +1,15 @@
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - make rpm
+
+deployment:
+  rpm:
+    branch:
+      - master
+    commands:
+      - make circle_deps
+      - make package_deploy
