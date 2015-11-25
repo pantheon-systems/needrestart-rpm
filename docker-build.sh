@@ -6,7 +6,7 @@ BUILD_VERSIONS=${BUILD_VERSIONS:-19 20 22}
 echo "==> Running RPM builds for these Fedora version(s): $BUILD_VERSIONS"
 echo
 
-CURRENT_DIR="$(dirname "$(readlink -f $0)")"
+CURRENT_DIR="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 
 RUN_ARGS="--rm"
 if [ -n "$CIRCLECI" ] ; then
