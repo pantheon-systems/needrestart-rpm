@@ -11,6 +11,11 @@ RPM artifacts to package_cloud. The push to package_cloud only happens from the 
 
 You can run the RPM builds manually with `make rpm`. Docker is required.
 
+RPMs will be built for multiple versions of Fedora. These are set by the `BUILD_VERSIONS`
+environment variable, and can be overridden at runtime. To build only fedora-22:
+
+    $ BUILD_VERSIONS=22 make rpm
+
 You can push the RPMs to package_cloud with `make package_deploy`.
 
 Ensure a `PACKAGECLOUD_TOKEN` env var is set in your local env or on the circle-ci project.
