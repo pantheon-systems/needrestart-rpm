@@ -1,6 +1,8 @@
 rpm package for needrestart utility
 ===================================
 
+[![Deprecated](https://img.shields.io/badge/Pantheon-Deprecated-yellow?logo=pantheon&color=FFDC28)](https://pantheon.io/docs/oss-support-levels#deprecated)
+
 RPM `.spec` and scripts for creating rpm packages of the `needrestart` util.
 
 Usage
